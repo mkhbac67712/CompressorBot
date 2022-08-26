@@ -49,7 +49,7 @@ async def help(event):
 async def ihelp(event):
     await event.edit(
         "**🐠 A Quality CompressorBot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Screenshots Too\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options",
-        buttons=[Button.inline("BACK", data="beck")],
+        buttons=[Button.inline("رجوع", data="beck")],
     )
 
 
@@ -58,10 +58,10 @@ async def beck(event):
     await event.edit(
         f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.",
         buttons=[
-            [Button.inline("HELP", data="ihelp")],
+            [Button.inline("مساعدة", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="github.com/1Danish-00/"),
-                Button.url("DEVELOPER", url="t.me/danish_00"),
+                Button.url("الكود المصدري", url="github.com/1Danish-00/"),
+                Button.url("المطور", url="t.me/danish_00"),
             ],
         ],
     )
@@ -70,11 +70,11 @@ async def beck(event):
 async def sencc(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "Choose Mode",
+        "اختر الوضع",
         buttons=[
             [
-                Button.inline("Default Compress", data=f"encc{key}"),
-                Button.inline("Custom Compress", data=f"ccom{key}"),
+                Button.inline("الضغط الافتراضي", data=f"encc{key}"),
+                Button.inline("ضغط مخصص", data=f"ccom{key}"),
             ],
             [Button.inline("Back", data=f"back{key}")],
         ],
@@ -87,16 +87,16 @@ async def back(e):
         "🐠  **What To Do** 🐠",
         buttons=[
             [
-                Button.inline("GENERATE SAMPLE", data=f"gsmpl{key}"),
-                Button.inline("SCREENSHOTS", data=f"sshot{key}"),
+                Button.inline("توليد العينة", data=f"gsmpl{key}"),
+                Button.inline("لقطات الشاشة", data=f"sshot{key}"),
             ],
-            [Button.inline("COMPRESS", data=f"sencc{key}")],
+            [Button.inline("ضغط", data=f"sencc{key}")],
         ],
     )
 
 
 async def ccom(e):
-    await e.edit("Send Ur Custom Name For That File")
+    await e.edit("أرسل اسمك المخصص لهذا الملف")
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     out, dl, thum, dtime = wh.split(";")
