@@ -29,12 +29,12 @@ async def up(event):
 async def start(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.reply(
-        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.",
+        f"مرحبا `{ok.user.first_name}`\nهذا البوت يمكنه تشفير مقاطع الفيديو. n\تقليل حجم مقاطع الفيديو مع تغيير ضئيل في الجودة n\يمكنك  إنشاء عينات ولقطات شاشة أيضًا.",
         buttons=[
-            [Button.inline("HELP", data="ihelp")],
+            [Button.inline("مساعدة", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="github.com/1Danish-00/CompressorBot"),
-                Button.url("DEVELOPER", url="t.me/danish_00"),
+                Button.url("الكود المصدري", url="github.com/1Danish-00/CompressorBot"),
+                Button.url("المطور", url="t.me/danish_00"),
             ],
         ],
     )
@@ -76,7 +76,7 @@ async def sencc(e):
                 Button.inline("الضغط الافتراضي", data=f"encc{key}"),
                 Button.inline("ضغط مخصص", data=f"ccom{key}"),
             ],
-            [Button.inline("Back", data=f"back{key}")],
+            [Button.inline("رجوع", data=f"back{key}")],
         ],
     )
 
@@ -84,7 +84,7 @@ async def sencc(e):
 async def back(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "🐠  **What To Do** 🐠",
+        "🐠  **ماذا تريد أن تفعل** 🐠",
         buttons=[
             [
                 Button.inline("توليد العينة", data=f"gsmpl{key}"),
@@ -96,7 +96,7 @@ async def back(e):
 
 
 async def ccom(e):
-    await e.edit("أرسل اسمك المخصص لهذا الملف")
+    await e.edit("أرسل الاسم المخصص لهذا الملف")
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     out, dl, thum, dtime = wh.split(";")
