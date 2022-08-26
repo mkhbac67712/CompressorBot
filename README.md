@@ -2,15 +2,14 @@
 
 ## ᴍᴜʟᴛɪғᴜɴᴄᴛɪᴏɴ ǫᴜᴀʟɪᴛʏ ᴄᴏᴍᴘʀᴇssᴏʀ  
 
-### A Telegram Video CompressorBot  
+### بوت تلجرام متعدد الاستخدامات  
 
-- it compress videos with negligible Quality change.
-- u can generate sample Compressed videos nd screenshots too.
-- u can set custom video name nd Thumbnail.
-- u can get logs videos to a channel too.
-- Coz of its Quality encode It takes little time to Compress.
-- For now i set it for maximum 5 Processes at a time.
-- Its Running Without Db so Block /ban /Broadcast Feature is currently Not available.
-
+- يقوم بضغط مقاطع الفيديو مع تغيير ضئيل في الجودة.
+- يمكنك إنشاء مقاطع فيديو مضغوطة ولقطات شاشة أيضًا.
+- يمكنك تعيين اسم الفيديو المخصص والصورة المصغرة.
+- يمكنك الحصول على سجلات مقاطع الفيديو إلى قناة أيضًا.
+- Coz بجودة تشفيره يستغرق القليل من الوقت للضغط.
+- في الوقت الحالي ، قمت بتعيينه على 5 عمليات كحد أقصى في المرة الواحدة.
+- تشغيله بدون قاعدة بيانات ، لذا فإن ميزة الحظر / الحظر / البث غير متوفرة حاليًا.
 ### Fork Repo Then click on below button of ur fork repo.  
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
